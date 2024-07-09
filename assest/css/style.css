@@ -6,6 +6,7 @@
     --secondary-color: #070707;
     --hover-color: #551B14;
     --primary-font: "Playwrite GB S", cursive;
+    --second-font: "Lora", serif;
 }
 
 /* Reset */
@@ -27,7 +28,23 @@ body {
 p {
     font-family: var(--primary-font);
 }
+ h1{
+    font-family: var(--second-font);
+    font-size: 2rem;
+    letter-spacing: 3px;
+    padding-top: 2rem;
+ }
 
+ hr{
+   height: 10px;
+    width: 300px;
+    margin: 15px 0;
+    background-color: #85756E;
+    
+    
+ }
+
+ 
 /* Header Style */
 header {
     position: fixed;
@@ -35,6 +52,7 @@ header {
     display: flex;
     justify-content: flex-start;
     width: 100%;
+    height: 200px;
     box-shadow: 5px 8px 10px var(--hover-color);
     z-index: 1000;
     
@@ -48,6 +66,7 @@ header {
 #menu {
     padding-top: 0.8rem;
     padding-left: 0.5rem;
+    padding-bottom: 0.8rem;
     letter-spacing: 3px;
 }
 
@@ -60,6 +79,7 @@ header {
     font-size: 1.4rem;
     font-family: var(--primary-font);
     text-align: center;
+    cursor: pointer;
 }
 
 /* Nav dropdown Burger */
@@ -67,7 +87,7 @@ nav {
     position: fixed;
     top: 0;
     right: -100%; /* Esconde o nav inicialmente fora da tela */
-    height: 100%;
+    max-height: 100%;
     width: 200px;
     background-color:#b3a1a5e9;
     box-shadow: 1px 2px 2px var(--hover-color);
@@ -102,6 +122,73 @@ main {
     flex-direction: column;
 }
 
+/* About main content */
+.content-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-sobre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.content-sobre img{
+    width: 90%;
+    height: 45%;
+    margin-top: 9rem;
+    box-shadow: 5px 8px 10px var(--hover-color);
+    
+
+    
+}
+.content-sobre p{
+    
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin:auto;
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+.content-company {
+    background-color: #b3a1a5e9;
+    border: 5px solid #ede8e8;
+    width: 350px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    box-shadow: 5px 8px 10px var(--hover-color);
+    
+    
+    
+}
+
+.link-button {
+    display: inline-block;
+    font-family: var(--second-font);
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    background-color: #ede8e8;
+    color: #070707;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.link-button:hover {
+    background-color: #85756E;
+    color: #f7f0f2;
+}
 /*Footer Style */
 footer {
     padding: 30px;
@@ -117,6 +204,7 @@ footer p {
     font-weight: bold;
     letter-spacing: 4px;
     color: #f7f0f2;
+    
 }
 
 #footer-social-media-contact {
