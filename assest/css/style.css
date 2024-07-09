@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+/* Variables */
+:root {
+    --primary-color--: #f7f0f2;
+    --secondary-color: #070707;
+    --hover-color: #551B14;
+    --primary-font: "Playwrite GB S", cursive;
+}
+
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color--);
+    color: var(--secondary-color);
+}
+
+p {
+    font-family: var(--primary-font);
+}
+
+/* Header Style */
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    box-shadow: 5px 8px 10px var(--hover-color);
+    z-index: 1000;
+    
+}
+.logo {
+    width: 100vw; /* Ajuste conforme necessário */
+    height: 100%;
+    
+}
+
+#menu {
+    padding-top: 0.8rem;
+    padding-left: 0.5rem;
+    letter-spacing: 3px;
+}
+
+#menu li {
+    list-style-type: none;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: #130e0d;
+    font-weight: bold;
+    font-size: 1.4rem;
+    font-family: var(--primary-font);
+    text-align: center;
+}
+
+/* Nav dropdown Burger */
+nav {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Esconde o nav inicialmente fora da tela */
+    height: 100%;
+    width: 200px;
+    background-color:#b3a1a5e9;
+    box-shadow: 1px 2px 2px var(--hover-color);
+    transition: left 0.3s ease; /* Transição suave para o dropdown */
+}
+
+#nav-toggle:checked ~ nav {
+    right: 0; /* Mostra o nav quando o checkbox está marcado */
+}
+
+/* Estilo para esconder o checkbox */
+#nav-toggle {
+    display: none;
+}
+
+.nav-burger {
+    font-size: 2rem;
+    padding: 15px;
+    cursor: pointer;
+    position: absolute;
+    left: 0.5rem;
+}
+
+/* Main - settings definitions to position */
+main {
+    /* Emerge main element to push footer down */
+    flex: 1 0 auto;
+    /* Add margin at the top to prevent content from being covered by the header */
+    padding-top: 75px;
+    /* Enable flex properties for child elements */
+    display: flex;
+    flex-direction: column;
+}
+
+/*Footer Style */
+footer {
+    padding: 30px;
+    background-color:#85756E;
+    box-shadow: 10px 8px 20px var(--hover-color);
+}
+
+footer p {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #f7f0f2;
+}
+
+#footer-social-media-contact {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    align-items: center;
+    gap: 10%;
+
+}
+
+#footer-social-media-contact i {
+    color: var(--primary-color--);
+    font-size: 160%;
+    padding: 5%;
+
+}
