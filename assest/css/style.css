@@ -245,10 +245,10 @@
         }
 
         .video-section::before {
-            content: "Aperte PLAY para ver um pouco da minha rotina";
+            content: "Aperte PLAY na minha rotina";
             position: absolute;
-            top: 50%;
-            left: 45%;
+            top: 65%;
+            left: 50%;
             transform: translate(-50%, -50%);
             font-size: 1.4rem;
             font-family: var(--primary-font);
@@ -261,6 +261,38 @@
             display: none;
         }
 
+
+
+        /*Contact page style section */
+        #header-conatiner-contact {
+            margin-top: 8rem;
+            background: url("../image/Captura de tela_10-7-2024_125327_www.instagram.com.jpeg") no-repeat center bottom / cover;
+            height: 500px;
+            opacity: 0.8;
+            position: relative;
+            
+            
+            /* Ajuste conforme necessário para contraste */
+        }
+        
+        
+        
+          
+            
+            
+        
+
+        .header > h1{
+            font-size: 4.4rem;
+            padding: 1rem 2rem;
+            
+    
+    
+
+        }
+        
+           
+        
         footer {
             padding: 30px;
             background-color:#85756E;
