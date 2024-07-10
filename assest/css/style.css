@@ -72,7 +72,7 @@ header {
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    height: 200px;
+    height: 150px;
     box-shadow: 5px 8px 10px var(--hover-color);
     z-index: 1000;
 }
@@ -278,7 +278,7 @@ main {
 
 /*Contact page style section */
 #header-conatiner-contact {
-    margin-top: 8rem;
+    margin-top: 5rem;
     background: url("../image/Captura de tela_10-7-2024_125327_www.instagram.com.jpeg") no-repeat center bottom / cover;
     height: 500px;
     opacity: 0.8;
@@ -308,10 +308,18 @@ main {
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
-    margin-top: 100px;
+    margin-top: 40px;
     font-family: var(--second-font);
+    
 }
-
+.form-content {
+    background: linear-gradient(135deg, #b3a1a5e9, #85756E );
+    border-radius: 10px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 5px 8px 10px var(--hover-color);
+}
 .form-group {
     background-color: #fff;
     border: 1px solid rgb(218, 220, 224);
@@ -325,10 +333,23 @@ main {
 .form-group input,
 .form-group textarea {
     margin-top: 10px;
-    
+    background-color: #85756e53;
     padding: 0.5rem;
+    
     border-radius: 4px;
     border: 1px solid #ccc;
+}
+
+.form-group textarea{
+    width: 60%;
+    min-width: 200px;
+}
+
+#name,
+#telephone{
+    width:100%;
+    max-width: 480px; /* Ajuste a largura máxima conforme necessário */
+    min-width: 200px;
 }
 
 .radio-group {
@@ -346,17 +367,26 @@ main {
     margin-bottom: 1rem;
 }
 
+.form-content{
+    box-shadow: 5px 8px 10px var(--hover-color);
+}
+
+
 .contact-form h4 {
     margin-bottom: 1rem;
+    font-family: var(--second-font);
 }
 
 .contact-form input[type="submit"] {
-    background-color: var(--primary-color--);
+    background-color:#b3a1a5e9 ;
     color: var(--secondary-color);
     border: none;
     padding: 0.7rem 1.5rem;
     border-radius: 4px;
     cursor: pointer;
+    margin-left:  28%;
+    font-family: var(--second-font);
+    font-size: 1rem;
     transition: background-color 0.3s ease;
 }
 
