@@ -65,7 +65,12 @@ hr {
     margin: 15px 0;
     background-color: #85756E;
 }
+.page-active {
 
+    border-bottom: 7px solid #85756E;
+    border-radius: 5px;
+
+}
 header {
     position: fixed;
     top: 0;
@@ -83,22 +88,24 @@ header {
 }
 
 #menu {
-    padding-top: 0.8rem;
-    padding-left: 0.5rem;
-    padding-bottom: 0.8rem;
+    
+    padding:1rem;
     letter-spacing: 3px;
+    height: 250px;
 }
 
 #menu li {
     list-style-type: none;
-    padding-left: 0.5rem;
-    padding-bottom: 0.5rem;
-    color: #130e0d;
+    padding: 1rem;
     font-weight: bold;
     font-size: 1.4rem;
     font-family: var(--primary-font);
     text-align: center;
     cursor: pointer;
+}
+#menu li a {
+    text-decoration: none;
+    color: var(--primary-color--);
 }
 
 nav {
@@ -110,6 +117,7 @@ nav {
     background-color: #b3a1a5e9;
     box-shadow: 1px 2px 2px var(--hover-color);
     transition: left 0.3s ease;
+    
 }
 
 #nav-toggle:checked~nav {
@@ -288,7 +296,154 @@ main {
     /* Ajuste conforme necessário para contraste */
 }
 
+/* Breakpoints */
 
+@media (max-width: 1200px) {
+    /* Large devices (desktops, 1200px and up) */
+}
+/* Between 992px and 1200px */
+@media only screen and (min-width: 992px) {
+    
+    header{
+        height: 180px;
+    }
+    /* Header */
+    #menu a:hover{
+        border-bottom: 7px solid #85756E;
+        border-radius: 5px;
+    }
+    
+    .content-sobre {
+        display: flex; /* Utiliza Flexbox */
+        flex-direction: row; /* Altera para linha (row) em telas maiores */
+         /* Altura fixa para o banner */
+         /* Espaçamento interno */
+        /* Cor de fundo opcional para destacar a caixa */
+         /* Sombra opcional para destaque */
+    }
+
+    .image-sobre {
+        flex: 0 0 40%; /* Largura da imagem */
+        max-width: 40%;
+        
+        height:100px ; /* Garante que a imagem não ultrapasse o contêiner */
+        /* Altura igual à do contêiner */
+        margin-right: 1rem; /* Espaço entre a imagem e o texto */
+        box-shadow: 5px 8px 10px var(--hover-color);
+         /* Garante que a imagem cubra todo o espaço disponível */
+    }
+
+    .textos-sobre {
+        margin-top: 6rem;
+        flex: 0 1 50%; /* O texto ocupa todo o espaço restante */
+        font-size: 1.5rem;
+        line-height: 1.6;
+        padding: 1rem; /* Espaçamento interno */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Alinha verticalmente ao centro */
+        
+    }
+    .textos-sobre hr{
+        margin-left: 15rem;
+    }
+    .link-button{
+        margin-left: 18rem;
+    }
+    .content-company {
+        position: relative; /* Volta a posição relativa */
+        min-width: 1200px;
+        width:45%;
+    }
+}
+/* Between 768px and 992px */
+@media only screen and (min-width: 768px) and (max-width:991px) {
+    
+    .content-sobre {
+        flex-direction: row; /* Altera para linha (row) em telas maiores */
+        align-items: flex-start; /* Alinha os itens no topo verticalmente */
+    }
+
+    .image-sobre {
+        flex: 0 0 20%; /* Largura da imagem */
+        max-width: 50%; /* Garante que a imagem não ultrapasse o contêiner */
+        height: 300px; /* Altura automática proporcional */
+        margin-left: 1rem; /* Espaço entre a imagem e o texto */
+        box-shadow: 5px 8px 10px var(--hover-color);
+    }
+
+    .textos-sobre {
+        flex: 1; /* O texto ocupa todo o espaço restante */
+        font-size: 1.5rem;
+        line-height: 2;
+        padding-top: 5rem;
+        
+    }
+
+    .content-company{
+        position: absolute;
+        left:2rem;
+        top:45rem;
+    }
+}
+
+@media only screen and (min-width: 769px){
+            /* Header */
+            
+            .nav-burger{
+                display: none;
+            }
+            #menu {
+                display: flex;
+                justify-content: flex-start;
+                padding: 0.25rem;
+                gap: 1rem;
+            }
+            #menu li a {
+                    color: var(--primary-color--);
+                    margin-left: 1rem;
+                    font-size: 1.3rem;
+                    
+                    
+                }
+            
+                #menu a {
+                    text-decoration: none;
+                }
+            
+}
+
+@media (max-width: 768px) {
+
+    /* Small devices (landscape phones, 768px and up) */
+    
+    .content-sobre img {
+        width: 80%;
+    }
+    .content-sobre p {
+        font-size: 1.3rem;
+    }
+    .content-company {
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Extra small devices (portrait phones, less than 576px) */
+    
+    .content-sobre p {
+        font-size: 1.1rem;
+    }
+    .content-company {
+        width: 100%;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    #menu li {
+        font-size: 1rem;
+    }
+}
 
 
 
