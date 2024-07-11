@@ -65,12 +65,14 @@ hr {
     margin: 15px 0;
     background-color: #85756E;
 }
+
 .page-active {
 
     border-bottom: 7px solid #85756E;
     border-radius: 5px;
 
 }
+
 header {
     position: fixed;
     top: 0;
@@ -84,12 +86,14 @@ header {
 
 .logo {
     width: 100vw;
+    min-width:20rem;
+    
     height: 100%;
 }
 
 #menu {
-    
-    padding:1rem;
+
+    padding: 1.8rem;
     letter-spacing: 3px;
     height: 250px;
 }
@@ -97,12 +101,14 @@ header {
 #menu li {
     list-style-type: none;
     padding: 1rem;
+    margin-right: 1rem;
     font-weight: bold;
     font-size: 1.4rem;
     font-family: var(--primary-font);
     text-align: center;
     cursor: pointer;
 }
+
 #menu li a {
     text-decoration: none;
     color: var(--primary-color--);
@@ -112,12 +118,10 @@ nav {
     position: fixed;
     top: 0;
     right: -100%;
-    max-height: 100%;
-    width: 200px;
     background-color: #b3a1a5e9;
     box-shadow: 1px 2px 2px var(--hover-color);
     transition: left 0.3s ease;
-    
+
 }
 
 #nav-toggle:checked~nav {
@@ -142,7 +146,10 @@ main {
     display: flex;
     flex-direction: column;
 }
-
+.header>h1 {
+    font-size: 5.6rem;
+    padding: 1rem 2rem;
+}
 .content-section {
     display: flex;
     flex-direction: column;
@@ -285,6 +292,7 @@ main {
 
 
 /*Contact page style section */
+
 #header-conatiner-contact {
     margin-top: 5rem;
     background: url("../image/Captura de tela_10-7-2024_125327_www.instagram.com.jpeg") no-repeat center bottom / cover;
@@ -301,128 +309,223 @@ main {
 @media (max-width: 1200px) {
     /* Large devices (desktops, 1200px and up) */
 }
+
 /* Between 992px and 1200px */
 @media only screen and (min-width: 992px) {
     
-    header{
-        height: 180px;
+    header {
+        height: 185px;
     }
+
     /* Header */
-    #menu a:hover{
+    #menu a:hover {
         border-bottom: 7px solid #85756E;
         border-radius: 5px;
     }
-    
+
     .content-sobre {
-        display: flex; /* Utiliza Flexbox */
-        flex-direction: row; /* Altera para linha (row) em telas maiores */
-         /* Altura fixa para o banner */
-         /* Espaçamento interno */
+        display: flex;
+        /* Utiliza Flexbox */
+        flex-direction: row;
+        /* Altera para linha (row) em telas maiores */
+        /* Altura fixa para o banner */
+        /* Espaçamento interno */
         /* Cor de fundo opcional para destacar a caixa */
-         /* Sombra opcional para destaque */
+        /* Sombra opcional para destaque */
     }
 
     .image-sobre {
-        flex: 0 0 40%; /* Largura da imagem */
+        flex: 0 0 40%;
+        /* Largura da imagem */
         max-width: 40%;
-        
-        height:100px ; /* Garante que a imagem não ultrapasse o contêiner */
+
+        height: 100px;
+        /* Garante que a imagem não ultrapasse o contêiner */
         /* Altura igual à do contêiner */
-        margin-right: 1rem; /* Espaço entre a imagem e o texto */
+        margin-right: 1rem;
+        /* Espaço entre a imagem e o texto */
         box-shadow: 5px 8px 10px var(--hover-color);
-         /* Garante que a imagem cubra todo o espaço disponível */
+        /* Garante que a imagem cubra todo o espaço disponível */
     }
 
     .textos-sobre {
         margin-top: 6rem;
-        flex: 0 1 50%; /* O texto ocupa todo o espaço restante */
+        flex: 0 1 50%;
+        /* O texto ocupa todo o espaço restante */
         font-size: 1.5rem;
         line-height: 1.6;
-        padding: 1rem; /* Espaçamento interno */
+        padding: 1rem;
+        /* Espaçamento interno */
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Alinha verticalmente ao centro */
-        
+        justify-content: center;
+        /* Alinha verticalmente ao centro */
+
     }
-    .textos-sobre hr{
+
+    .textos-sobre hr {
         margin-left: 15rem;
     }
-    .link-button{
+
+    .link-button {
         margin-left: 18rem;
     }
+
     .content-company {
-        position: relative; /* Volta a posição relativa */
+        position: relative;
+        /* Volta a posição relativa */
         min-width: 1200px;
-        width:45%;
+        width: 45%;
     }
 }
+
 /* Between 768px and 992px */
 @media only screen and (min-width: 768px) and (max-width:991px) {
-    
+
     .content-sobre {
-        flex-direction: row; /* Altera para linha (row) em telas maiores */
-        align-items: flex-start; /* Alinha os itens no topo verticalmente */
+        flex-direction: row;
+        /* Altera para linha (row) em telas maiores */
+        align-items: flex-start;
+        /* Alinha os itens no topo verticalmente */
     }
 
     .image-sobre {
-        flex: 0 0 20%; /* Largura da imagem */
-        max-width: 50%; /* Garante que a imagem não ultrapasse o contêiner */
-        height: 300px; /* Altura automática proporcional */
-        margin-left: 1rem; /* Espaço entre a imagem e o texto */
+        flex: 0 0 20%;
+        /* Largura da imagem */
+        max-width: 50%;
+        /* Garante que a imagem não ultrapasse o contêiner */
+        height: 300px;
+        /* Altura automática proporcional */
+        margin-left: 1rem;
+        /* Espaço entre a imagem e o texto */
         box-shadow: 5px 8px 10px var(--hover-color);
     }
 
     .textos-sobre {
-        flex: 1; /* O texto ocupa todo o espaço restante */
+        flex: 1;
+        /* O texto ocupa todo o espaço restante */
         font-size: 1.5rem;
         line-height: 2;
         padding-top: 5rem;
-        
+
     }
 
-    .content-company{
+    .content-company {
         position: absolute;
-        left:2rem;
-        top:45rem;
+        left: 2rem;
+        top: 45rem;
     }
 }
 
-@media only screen and (min-width: 769px){
-            /* Header */
-            
-            .nav-burger{
-                display: none;
-            }
-            #menu {
-                display: flex;
-                justify-content: flex-start;
-                padding: 0.25rem;
-                gap: 1rem;
-            }
-            #menu li a {
-                    color: var(--primary-color--);
-                    margin-left: 1rem;
-                    font-size: 1.3rem;
-                    
-                    
-                }
-            
-                #menu a {
-                    text-decoration: none;
-                }
-            
+@media only screen and (min-width: 769px) {
+
+    /* Header */
+    nav {
+        left:0rem;
+        margin-top: 0;
+        height: 0;
+        width: 800px;
+        
+        
+
+    }
+
+    .nav-burger {
+        display: none;
+    }
+
+    #menu {
+        display: flex;
+        justify-content: flex-start;
+        padding: 0.25rem;
+        margin-left: 0.8rem;
+        gap: 1rem;
+        
+    }
+
+    #menu li a {
+        color: var(--primary-color--);
+        padding: 0;
+        margin-left: 1rem;
+        font-size: 1.3rem;
+
+
+    }
+
+    #menu a {
+        text-decoration: none;
+    }
+    .titulo-services{
+        margin-top: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:1rem
+    }
+    .titulo-services p{
+        width: 50%;
+        font-size: 1.5rem;
+        
+    }
+    #videoSection.video-section{
+        width: 45%;
+        max-width:700px;
+        
+    }
+    #myVideo{
+        width: 80%;
+        
+        
+    }
+    .content-services{
+        margin-top: 0.2rem;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        width: 95%;
+    }
+
+    .video-map{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 2rem;
+        
+        
+    }
+    .maps{
+        align-self: center;
+       
+    }
+    .maps iframe{
+        border-radius: 10px;
+    }
+
+    #header-conatiner-contact {
+        background: url("../image/Captura de tela_10-7-2024_125327_www.instagram.com.jpeg") no-repeat center bottom  / cover;
+        height: 550px;
+        background-attachment: fixed;
+    }
+
+    .header>h1 {
+        
+        padding: 1rem 2rem;
+        margin-top: 10rem;
+        font-size: 8rem;
+    }
+
 }
 
 @media (max-width: 768px) {
 
     /* Small devices (landscape phones, 768px and up) */
-    
+
     .content-sobre img {
         width: 80%;
     }
+
     .content-sobre p {
         font-size: 1.3rem;
     }
+
     .content-company {
         width: 80%;
     }
@@ -434,26 +537,31 @@ main {
     .content-sobre p {
         font-size: 1.1rem;
     }
+
     .content-company {
         width: 100%;
     }
+
     h1 {
         font-size: 2rem;
     }
+
     #menu li {
         font-size: 1rem;
     }
-}
+
+    
+    }
+    
 
 
 
 
 
 
-.header>h1 {
-    font-size: 4.4rem;
-    padding: 1rem 2rem;
-}
+
+
+
 /* Contact page style */
 /* Contact page style */
 .contact-form {
@@ -465,16 +573,18 @@ main {
     padding: 2rem 0;
     margin-top: 40px;
     font-family: var(--second-font);
-    
+
 }
+
 .form-content {
-    background: linear-gradient(135deg, #b3a1a5e9, #85756E );
+    background: linear-gradient(135deg, #b3a1a5e9, #85756E);
     border-radius: 10px;
     padding: 2rem;
     width: 90%;
     max-width: 600px;
     box-shadow: 5px 8px 10px var(--hover-color);
 }
+
 .form-group {
     background-color: #fff;
     border: 1px solid rgb(218, 220, 224);
@@ -490,20 +600,21 @@ main {
     margin-top: 10px;
     background-color: #85756e53;
     padding: 0.5rem;
-    
+
     border-radius: 4px;
     border: 1px solid #ccc;
 }
 
-.form-group textarea{
+.form-group textarea {
     width: 60%;
     min-width: 200px;
 }
 
 #name,
-#telephone{
-    width:100%;
-    max-width: 480px; /* Ajuste a largura máxima conforme necessário */
+#telephone {
+    width: 100%;
+    max-width: 480px;
+    /* Ajuste a largura máxima conforme necessário */
     min-width: 200px;
 }
 
@@ -522,7 +633,7 @@ main {
     margin-bottom: 1rem;
 }
 
-.form-content{
+.form-content {
     box-shadow: 5px 8px 10px var(--hover-color);
 }
 
@@ -533,13 +644,13 @@ main {
 }
 
 .contact-form input[type="submit"] {
-    background-color:#b3a1a5e9 ;
+    background-color: #b3a1a5e9;
     color: var(--secondary-color);
     border: none;
     padding: 0.7rem 1.5rem;
     border-radius: 4px;
     cursor: pointer;
-    margin-left:  28%;
+    margin-left: 28%;
     font-family: var(--second-font);
     font-size: 1rem;
     transition: background-color 0.3s ease;
@@ -578,4 +689,18 @@ footer p {
     color: var(--primary-color--);
     font-size: 160%;
     padding: 5%;
+}
+.fa-solid.fa-envelope::after{
+    content: "thalitaleme@gmail.com";
+    text-transform:capitalize;
+    font-size: 0.7rem;
+    display: inline-block;
+    letter-spacing: 2px;
+}
+.fa-solid.fa-phone::after{
+    content: "55 14 99627-6227";
+    font-size: 0.8rem;
+    display: inline-block;
+    letter-spacing: 2px;
+
 }
