@@ -43,8 +43,24 @@ h1 {
     background-origin: border-box;
 }
 
+/*animations */
 h1 span {
     animation: blink 1s infinite;
+}
+
+@keyframes slideInFade {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.image-sobre {
+    animation: slideInFade 1s ease-in-out;
 }
 
 @keyframes blink {
@@ -238,6 +254,12 @@ main {
     background-color: #b3a1a58f;
     width: 95%;
     margin: 10px 0px;
+    transition: all 0.5s ease;
+}
+.service:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #85756E;
 }
 
 .service-image {
@@ -335,25 +357,6 @@ footer div {
     margin-top: 4rem;
 }
 
-footer div {
-    color: #f7f0f2;
-    display: flex;
-    justify-content: center;
-    margin-top: 4rem;
-}
-
-footer div span {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem; /* Espaço entre o ícone e o texto */
-}
-footer div {
-    color: #f7f0f2;
-    display: flex;
-    justify-content: center;
-    margin-top: 4rem;
-    font-size: 1.2rem;
-}
 
 footer div span {
     display: flex;
@@ -387,7 +390,7 @@ footer div span {
     font-size: 1rem; /* Tamanho da fonte do número de telefone */
     position: absolute;
     
-   left: 3.5rem;
+   
     
     padding-top: 1.25rem;
     color: #ede8e8; /* Espaçamento entre o ícone e o número de telefone */
@@ -667,6 +670,7 @@ footer div span {
         display: grid;
         grid-template-columns: repeat(3,1fr);
         width: 95%;
+        
     }
 
     .video-map{
