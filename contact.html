@@ -9,6 +9,28 @@
     <!--Favicon-->
     <link rel="icon" type="image/png" sizes="16x16" href="./assest/favicon/icons8-folder-cute-color-16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assest/favicon/icons8-folder-cute-color-32.png">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        const templateParams = {
+            to_name: 'Thalita Leme',        // Corresponde a {{to_name}} no template
+            from_name: 'Miriam McCay',    // Corresponde a {{from_name}} no template
+            message: 'Oii, Thalita! Tenho Interesse na Consultoria', // Corresponde a {{message}} no template
+            reply_to: 'miriammcay@gmail.com'  // Corresponde a {{reply_to}} no template
+        };
+    
+        (function() {
+            emailjs.init("0jvgMBqq2VaB30rYy");
+            
+            /*emailjs.send('gmail', 'template_bxmumuo', templateParams)
+                .then((response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                }, (error) => {
+                    console.log('FAILED...', error);
+                });*/ // test
+        })();
+    </script>
+    
 </head>
 
 <body>
@@ -37,7 +59,7 @@
         <section class="contact-form">
             <div class="form-content">
                 <h2>Formulário de Contato</h2>
-                <form>
+                <form onsubmit="return sendMail(this);">
                     <div class="form-group">
                         <label for="name">Nome/Empresa <span style="color: red;">*</span></label>
                         <input type="text" id="name" required name="name" placeholder="Sua Resposta">
@@ -126,6 +148,7 @@
                 2024</span>
         </div>
     </footer>
+    <script src="assest/script/sendEmail.js"></script>
 </body>
 
 </html>

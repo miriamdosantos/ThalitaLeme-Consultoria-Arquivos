@@ -592,6 +592,35 @@ footer div span {
         width: 45%;
     }
 
+    .form-content {
+        background: linear-gradient(135deg, #b3a1a5e9, #85756E);
+        border-radius: 10px;
+        padding: 2rem;
+        width: 1000px;
+        max-width: 100%;
+        box-shadow: 5px 8px 10px var(--hover-color);
+    }
+    
+    .form-group {
+        background-color: #fff;
+        border: 1px solid rgb(218, 220, 224);
+        border-radius: 8px;
+        padding: 20px;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .contact-form input[type="submit"] {
+        
+        margin-left: 40%;
+        
+    }
+
+    .contact-form input[type="submit"]:hover {
+        background-color: #85756E;
+    }
+    
     
     
 }
